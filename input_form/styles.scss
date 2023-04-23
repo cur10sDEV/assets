@@ -1,0 +1,116 @@
+// Google Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+// Variables
+$first-color: #1a73e8;
+$second-color: #808688;
+$border-color: #dadce0;
+$font: "Roboto", sans-serif;
+$font-size: 1rem;
+
+
+// Overwrite defaults
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: $font;
+    font-size: $font-size;
+}
+
+
+// Center div
+
+.form1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.form {
+    width: 19%;
+    padding: 4rem 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(92,99,105,.2);
+    background-color: #fff7ef;
+
+    &_title {
+        margin-bottom: 3rem;
+        font-weight: 400;
+    }
+
+    &_div {
+        position: relative;
+        height: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    &_input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 90%;
+        height: 100%;
+        border: 1px solid #664e2f;
+        border-radius: .5rem;
+        outline: none;
+        padding: .8rem;
+        background: none;
+        z-index: 1;
+
+    }
+
+    &_label {
+        position: absolute;
+        left:.5rem;
+        top: .7rem;
+        padding: 0 .25rem;
+        background-color: #fff7ef;
+        color: $second-color;
+        transition: .3s;
+    }
+
+    &_button {
+        display: block;
+        margin-left: auto;
+        padding: 0.75rem 2rem;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        transition: .3s;
+        color: #fff;
+        background-color: #423535;
+        border-radius: .5rem;
+
+        &:hover {
+            box-shadow: 0 10px 36px rgba(0,0,0,.15);
+        }
+    }
+}
+
+
+// Input focus move up label
+.form_input:focus + .form_label {
+    top: -.5rem;
+    left: .5rem;
+    color:#664e2f;
+    font-size: .8rem;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+// Input Focus
+.form_input:focus {
+    border: 1.5px solid #664e2f;
+}
+
+
+@media screen and (max-width: 600px) {
+    .form {
+        width: 55%;
+    }
+}

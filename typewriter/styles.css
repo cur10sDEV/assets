@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background-color: white;
+}
+
+h1 {
+  font-family: "Source Code Pro", monospace, sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+  margin: 4rem 0;
+  color: rgba(0, 0, 0, 0.81);
+  text-align: center;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+h1::before {
+  background-color: #fff;
+  -webkit-animation: typewriter 5s 1s steps(25) forwards;
+          animation: typewriter 5s 1s steps(25) forwards;
+}
+
+h1::after {
+  width: 0.1em;
+  background-color: black;
+  -webkit-animation: typewriter 5s steps(25) 1s forwards, blink 1000ms steps(25) infinite;
+          animation: typewriter 5s steps(25) 1s forwards, blink 1000ms steps(25) infinite;
+}
+
+@-webkit-keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+@keyframes blink {
+  to {
+    background-color: transparent;
+  }
+}
+p {
+  font-family: monospace;
+  font-size: 1.5rem;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transform: translateY(1.5rem);
+  -webkit-animation: fadeInUp 900ms ease 6.5s forwards;
+          animation: fadeInUp 900ms ease 6.5s forwards;
+}
+
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=styles.css.map */

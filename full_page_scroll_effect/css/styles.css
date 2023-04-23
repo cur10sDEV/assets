@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+
+.container {
+	scroll-snap-type: y mandatory;
+	overflow-y: scroll;
+	height: 100vh;
+	scroll-padding: 10%; /* scroll padding optional but can be of great use for user refrence */
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	scroll-snap-align: start;
+}
+
+.one {
+	background-color: purple;
+	color: white;
+}
+
+.two {
+	background-color: skyblue;
+}
+
+.three {
+	background-color: darkcyan;
+}
+
+.four {
+	color: white;
+	background-color: black;
+}
